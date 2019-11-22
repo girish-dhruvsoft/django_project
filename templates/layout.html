@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div>{%for key,value in authorization_details.items %}
+    	<b>{{key}}</b>{{value}}<br/>
+    	{% endfor %}
+    </div>
+    <div><center><br/><br/>{{for_button}}</center>
+    </div>
+    <div>
+     <b> {{ error_message}} </b>
+    </div>
+    <div>
+     <b> {% if error_msg == "0001" %}
+    <p>Sorry! Unable establish connection with Salesforce</p>
+    {% elif error_msg in "0002" %}
+    <p>Sorry! Unable process your request</p>
+    {% elif error_msg in "0003" %}
+     <p>Sorry! Unable to store details in the database</p>
+     % elif error_msg in "0004" %}
+     <p>Sorry! something went wrong please try again</p>
+     {% endif %}
+    </b></div>
+  </body>
+</html>

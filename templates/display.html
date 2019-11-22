@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+   <body><center>
+   	<table border=1 cellspacing="0px" cellpadding="5px">
+   	
+   		<tr><b>
+         	<th>Lead Id</th>
+         	<th>Name</th>
+         	<th>Email</th>
+         	<th>Company</th>
+         	<th>Lead Source</th>
+         	<th>Created Date</th>
+         	<th>City</th>
+         	<th>Owner Id</th></b>	
+         </tr>
+         {% for result in lead_list %}
+         <tr>
+         {% for key, value in result.items %}
+         	<td>{{ value }}</td>
+         {% endfor %}
+         </tr>
+     {% endfor %}
+     </table>
+    </center>
+   </body>
+</html>

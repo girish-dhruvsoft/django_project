@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form method="POST" action="/connect/">
+  {% csrf_token %}
+  {{form}}
+  <button type="submit">Log in</button>
+</form> 
+</body>
+</html>
